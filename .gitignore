@@ -136,6 +136,10 @@ local.properties
 
 # IntelliJ
 /out/
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -173,5 +177,11 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.mvn
+mvnw
+mvnw.cmd
+
+#Git
+.gitignore
 
 logs/
