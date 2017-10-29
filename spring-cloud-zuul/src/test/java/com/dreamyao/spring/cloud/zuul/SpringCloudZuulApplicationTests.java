@@ -1,4 +1,4 @@
-package com.dreamyao.spring.cloud.spring.cloud.zuul;
+package com.dreamyao.spring.cloud.zuul;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

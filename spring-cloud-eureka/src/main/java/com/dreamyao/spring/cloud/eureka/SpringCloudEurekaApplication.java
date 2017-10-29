@@ -1,4 +1,4 @@
-package com.dreamyao.spring.cloud.spring.cloud.eureka;
+package com.dreamyao.spring.cloud.eureka;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

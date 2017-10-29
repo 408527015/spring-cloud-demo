@@ -1,4 +1,4 @@
-package com.dreamyao.spring.cloud.spring.cloud.service1;
+package com.dreamyao.spring.cloud.service1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringCloudService1ApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }

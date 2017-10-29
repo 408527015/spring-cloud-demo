@@ -1,4 +1,4 @@
-package com.dreamyao.spring.cloud.spring.cloud.zuul;
+package com.dreamyao.spring.cloud.zuul;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;

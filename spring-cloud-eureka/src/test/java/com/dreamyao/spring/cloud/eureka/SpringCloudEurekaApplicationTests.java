@@ -1,4 +1,4 @@
-package com.dreamyao.spring.cloud.spring.cloud.eureka;
+package com.dreamyao.spring.cloud.eureka;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

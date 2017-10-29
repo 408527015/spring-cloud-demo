@@ -5,7 +5,7 @@
 
     <groupId>com.dreamyao.spring.cloud</groupId>
     <artifactId>spring-cloud-demo</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>0.0.1.SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-demo</name>
@@ -14,18 +14,11 @@
     <modules>
         <module>spring-cloud-zuul</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-service1</module>
     </modules>
 
-    <!--<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.8.RELEASE</version>
-        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
-    </parent>-->
-
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.encoding>UTF-8</project.encoding>
         <java.version>1.8</java.version>
         <!-- spring cloud 版本 -->
         <spring.cloud.version>Dalston.SR4</spring.cloud.version>
@@ -60,20 +53,20 @@
             </dependency>
 
             <!--Spring Framework 版本相关依赖-->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
                 <version>${spring.framework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
+            </dependency>-->
 
             <!--Spring Boot 热部署依赖jar包-->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
                 <scope>runtime</scope>
-            </dependency>
+            </dependency>-->
             <!--Spring Boot Junit测试依赖jar包-->
             <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -92,20 +85,34 @@
         </plugins>
     </build>-->
 
-    <!--<build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>-->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-
+    <!--发布 -->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Local Nexus Releases Reporstory</name>
+            <url>http://10.11.12.13:31002/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Local Nexus Snapshots Reporstory</name>
+            <url>http://10.11.12.13:31002/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
