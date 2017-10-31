@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration scan="true" sacnPeriod="60 seconds" debug="false">
     <!-- 日志目录 -->
-    <property name="LOG_HOME" value="D:/temp/services/service1/logs" />
-    <property name="serverName" value="service1" />
+    <!--<property name="LOG_HOME" value="D:/temp/services/service1/logs" />-->
+    <springProperty scope="context" name="LOG_HOME" source="dreamyao.log.path"/>
+    <!--<property name="LOG_NAME" value="service1" />-->
+    <springProperty scope="context" name="LOG_NAME" source="dreamyao.log.name"/>
+    <springProperty scope="context" name="LOG_LEVEL" source="dreamyao.log.level"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -17,7 +20,7 @@
     <!--日志配置-->
     <appender name="FILEDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_HOME}/debug/${serverName}_debug_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}/${LOG_NAME}_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>31</maxHistory>
             <totalSizeCap>5GB</totalSizeCap>
@@ -28,19 +31,12 @@
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="WARN" />
-    <logger name="org.mybatis" level="WARN" />
-    <logger name="org.hibernate" level="WARN" />
-    <logger name="org.apache" level="WARN" />
-    <logger name="com.netflix" level="WARN" />
-    <logger name="springfox.documentation" level="WARN" />
-    <logger name="com.ulisesbocchio" level="WARN" />
     <logger name="com.dreamyao" level="DEBUG" />
 
     <!-- 日志输出级别 -->
     <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->
-    <root level="DEBUG">
-        <appender-ref ref="FILEDEBUG" />
+    <root level="${LOG_LEVEL}">
+        <!--<appender-ref ref="FILEDEBUG" />-->
         <!-- 生产环境将请stdout去掉 -->
          <appender-ref ref="STDOUT" />
     </root>
