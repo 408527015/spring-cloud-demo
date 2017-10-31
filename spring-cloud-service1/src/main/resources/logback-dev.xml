@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration scan="true" sacnPeriod="60 seconds" debug="false">
+    <!-- 日志目录 -->
+    <property name="LOG_HOME" value="D:/temp/services/service1/logs" />
+    <property name="serverName" value="service1" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger Line:%-3L - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+    </appender>
+
+    <!--日志配置-->
+    <appender name="FILEDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/debug/${serverName}_debug_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>31</maxHistory>
+            <totalSizeCap>5GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger Line:%-3L - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="WARN" />
+    <logger name="org.mybatis" level="WARN" />
+    <logger name="org.hibernate" level="WARN" />
+    <logger name="org.apache" level="WARN" />
+    <logger name="com.netflix" level="WARN" />
+    <logger name="springfox.documentation" level="WARN" />
+    <logger name="com.ulisesbocchio" level="WARN" />
+    <logger name="com.dreamyao" level="DEBUG" />
+
+    <!-- 日志输出级别 -->
+    <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->
+    <root level="DEBUG">
+        <appender-ref ref="FILEDEBUG" />
+        <!-- 生产环境将请stdout去掉 -->
+         <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
