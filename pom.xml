@@ -5,7 +5,7 @@
 
     <groupId>com.dreamyao.spring.cloud</groupId>
     <artifactId>spring-cloud-demo</artifactId>
-    <version>0.0.1.SNAPSHOT</version>
+    <version>0.0.1.SNAPSHOTS</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-demo</name>
@@ -73,6 +73,13 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
             </dependency>-->
+
+            <!--lombok 简化java代码的插件,除引入jar包外还需要IDE安装对应插件-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.8</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -105,14 +112,14 @@
     <!--发布 -->
     <distributionManagement>
         <repository>
-            <id>nexus-releases</id>
+            <id>host-releases</id>
             <name>Local Nexus Releases Reporstory</name>
-            <url>http://10.11.12.13:31002/nexus/content/repositories/releases/</url>
+            <url>http://maven.dreamyao.com/repository/host-release/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
+            <id>host-snapshots</id>
             <name>Local Nexus Snapshots Reporstory</name>
-            <url>http://10.11.12.13:31002/nexus/content/repositories/snapshots/</url>
+            <url>http://maven.dreamyao.com/repository/host-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

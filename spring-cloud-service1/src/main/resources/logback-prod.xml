@@ -81,21 +81,21 @@
         </filter>
     </appender>
 
-    <logger name="org.springframework" level="WARN" />
-    <logger name="org.mybatis" level="WARN" />
-    <logger name="org.hibernate" level="WARN" />
-    <logger name="org.apache" level="WARN" />
-    <logger name="com.netflix" level="WARN" />
-    <logger name="springfox.documentation" level="WARN" />
-    <logger name="com.ulisesbocchio" level="WARN" />
-    <logger name="com.dreamyao" level="DEBUG" />
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.mybatis" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="com.netflix" level="WARN"/>
+    <logger name="springfox.documentation" level="WARN"/>
+    <logger name="com.ulisesbocchio" level="WARN"/>
+    <logger name="com.dreamyao" level="DEBUG"/>
 
     <!-- 日志输出级别 -->
     <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->
     <root level="${LOG_LEVEL}">
-        <appender-ref ref="FILEDEBUG" />
-        <appender-ref ref="FILEINFO" />
-        <appender-ref ref="FILEWARN" />
-        <appender-ref ref="FILEERROR" />
+        <appender-ref ref="FILEDEBUG"/>
+        <appender-ref ref="FILEINFO"/>
+        <appender-ref ref="FILEWARN"/>
+        <appender-ref ref="FILEERROR"/>
     </root>
 </configuration>

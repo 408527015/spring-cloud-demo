@@ -31,13 +31,13 @@
         </encoder>
     </appender>
 
-    <logger name="com.dreamyao" level="DEBUG" />
+    <logger name="com.dreamyao" level="DEBUG"/>
 
     <!-- 日志输出级别 -->
     <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->
     <root level="${LOG_LEVEL}">
-        <appender-ref ref="FILEDEBUG" />
+        <appender-ref ref="FILEDEBUG"/>
         <!-- 生产环境将请stdout去掉 -->
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
