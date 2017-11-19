@@ -16,12 +16,12 @@ maven settings.xml
     <server>  
       <id>host-releases</id>  
       <username>test</username>  
-      <password>test</password>  
+      <password>****</password>  
     </server>  
     <server>  
       <id>host-snapshots</id>  
       <username>test</username>  
-      <password>test</password>  
+      <password>****</password>  
     </server>
   </servers>
 
