@@ -12,9 +12,9 @@
     <description>Demo project for Spring Cloud</description>
 
     <modules>
-        <module>spring-cloud-zuul</module>
-        <module>spring-cloud-eureka</module>
-        <module>spring-cloud-service1</module>
+        <module>dreamyao-zuul</module>
+        <module>dreamyao-eureka</module>
+        <module>dreamyao-service1</module>
     </modules>
 
     <properties>
