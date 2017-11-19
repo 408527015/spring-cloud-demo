@@ -6,7 +6,7 @@
     <artifactId>dreamyao-service1</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-cloud-service1</name>
+    <name>dreamyao-service1</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
