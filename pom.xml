@@ -16,6 +16,7 @@
         <module>dreamyao-eureka</module>
         <module>dreamyao-service1</module>
         <module>dreamyao-web</module>
+        <module>dreamyao-common</module>
     </modules>
 
     <properties>
@@ -138,9 +139,30 @@
                                 <skip>true</skip>
                             </configuration>
                         </execution>
-
                     </executions>
                 </plugin>
+
+                <!--<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <descriptors>
+                            <descriptor>src/main/assembly/assembly1.xml</descriptor>
+                            <descriptor>src/main/assembly/assembly2.xml</descriptor>
+                            <descriptor>src/main/assembly/assembly3.xml</descriptor>
+                        </descriptors>
+                    </configuration>
+                </plugin>-->
 
                 <!--<plugin>
                     <groupId>org.springframework.boot</groupId>
