@@ -5,7 +5,7 @@
 
     <groupId>com.dreamyao.spring.cloud</groupId>
     <artifactId>spring-cloud-demo</artifactId>
-    <version>0.0.1.SNAPSHOTS</version>
+    <version>1.0.0.SNAPSHOTS</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-demo</name>
@@ -15,6 +15,7 @@
         <module>dreamyao-zuul</module>
         <module>dreamyao-eureka</module>
         <module>dreamyao-service1</module>
+        <module>dreamyao-web</module>
     </modules>
 
     <properties>

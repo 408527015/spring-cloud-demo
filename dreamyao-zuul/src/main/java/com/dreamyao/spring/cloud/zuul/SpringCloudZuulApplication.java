@@ -5,8 +5,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
- * @author stone
- * @since 2017/10/27
+ * @author Stone
+ * @version 1.0.0
+ * @date 2017/10/27
  */
 @EnableZuulProxy
 @SpringCloudApplication
