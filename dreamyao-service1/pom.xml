@@ -13,15 +13,14 @@
         <groupId>com.dreamyao.spring.cloud</groupId>
         <artifactId>spring-cloud-demo</artifactId>
         <version>1.0.0.SNAPSHOTS</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>test-other</artifactId>
+            <artifactId>dreamyao-common</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <!--Spring Boot 热部署依赖jar包-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
