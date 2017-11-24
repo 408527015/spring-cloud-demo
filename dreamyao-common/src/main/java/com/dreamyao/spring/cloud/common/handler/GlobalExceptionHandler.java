@@ -17,8 +17,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public String jsonErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-        //TODO
-        return "";
+        return "exception";
     }
 
 }
