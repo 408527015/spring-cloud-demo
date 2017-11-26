@@ -1,7 +1,9 @@
 package com.dreamyao.spring.cloud.service1.controller;
 
 import com.dreamyao.spring.cloud.common.exception.ServiceException;
+import com.dreamyao.spring.cloud.common.pojo.service1.UserVO;
 import com.dreamyao.spring.cloud.service1.service.IUserService;
+import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +37,10 @@ public class UserController {
         String user = userService.addUser();
         LOGGER.info("user={}",user);
         return user;
+    }
+
+    @RequestMapping(value = "/findUserList", method = RequestMethod.GET)
+    public PageInfo<UserVO> findUserList() throws ServiceException {
+        return userService.findUserList();
     }
 }
