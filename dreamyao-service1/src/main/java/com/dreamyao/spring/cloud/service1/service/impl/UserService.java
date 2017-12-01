@@ -2,7 +2,7 @@ package com.dreamyao.spring.cloud.service1.service.impl;
 
 import com.dreamyao.spring.cloud.common.exception.ServiceException;
 import com.dreamyao.spring.cloud.common.pojo.service1.UserVO;
-import com.dreamyao.spring.cloud.service1.dao.UserDAO;
+import com.dreamyao.spring.cloud.service1.dao.master.UserDAO;
 import com.dreamyao.spring.cloud.service1.service.IUserService;
 import com.github.pagehelper.PageInfo;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;

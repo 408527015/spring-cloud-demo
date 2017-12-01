@@ -1,6 +1,7 @@
 package com.dreamyao.spring.cloud.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.dreamyao.spring.cloud.common.annotation.DruidMasterExistAnnotation;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -20,11 +21,11 @@ import javax.sql.DataSource;
  * @date 2017/11/27
  */
 @Configuration
+@DruidMasterExistAnnotation
 // 扫描 Mapper 接口并容器管理
 @MapperScan(basePackages = {"com.dreamyao.spring.cloud.*.dao.master"}, sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig {
-    // 精确到 master 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "org.spring.springboot.dao.master";
+
     static final String MAPPER_LOCATION = "classpath:mapper/master/*.xml";
 
     @Value("${master.datasource.url}")

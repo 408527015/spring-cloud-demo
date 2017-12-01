@@ -1,6 +1,7 @@
 package com.dreamyao.spring.cloud.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.dreamyao.spring.cloud.common.annotation.DruidClusterExistAnnotation;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -19,12 +20,12 @@ import javax.sql.DataSource;
  * @date 2017/11/27
  */
 @Configuration
+@DruidClusterExistAnnotation
 // 扫描 Mapper 接口并容器管理
-@MapperScan(basePackages = ClusterDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "clusterSqlSessionFactory")
+@MapperScan(basePackages = {"com.dreamyao.spring.cloud.*.dao.master"}, sqlSessionFactoryRef = "clusterSqlSessionFactory")
 public class ClusterDataSourceConfig {
-    // 精确到 cluster 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "org.spring.springboot.dao.cluster";
-    static final String MAPPER_LOCATION = "classpath:mapper/cluster/*.xml";
+
+    static final String MAPPER_LOCATION = "classpath:mappers/cluster/*.xml";
 
     @Value("${cluster.datasource.url}")
     private String url;

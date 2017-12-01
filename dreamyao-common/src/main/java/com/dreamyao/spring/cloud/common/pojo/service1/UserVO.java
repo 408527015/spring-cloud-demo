@@ -9,9 +9,11 @@ import com.dreamyao.spring.cloud.common.pojo.BaseVO;
  */
 public class UserVO extends BaseVO {
 
-    public String userID;
+    public String id;
 
-    public String userName;
+    public String cnName;
+
+    public String enName;
 
     public String age;
 
@@ -19,24 +21,38 @@ public class UserVO extends BaseVO {
 
     public String email;
 
-    public String phone;
+    public String mobile;
 
-    public String addr;
+    public String country;
 
-    public String getUserID() {
-        return userID;
+    public String province;
+
+    public String city;
+
+    public String address;
+
+    public String getId() {
+        return id;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCnName() {
+        return cnName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCnName(String cnName) {
+        this.cnName = cnName;
+    }
+
+    public String getEnName() {
+        return enName;
+    }
+
+    public void setEnName(String enName) {
+        this.enName = enName;
     }
 
     public String getAge() {
@@ -63,19 +79,43 @@ public class UserVO extends BaseVO {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
-    public String getAddr() {
-        return addr;
+    public String getCountry() {
+        return country;
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
