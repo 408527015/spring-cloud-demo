@@ -22,10 +22,10 @@ import javax.sql.DataSource;
 @Configuration
 @DruidClusterExistAnnotation
 // 扫描 Mapper 接口并容器管理
-@MapperScan(basePackages = {"com.dreamyao.spring.cloud.*.dao.master"}, sqlSessionFactoryRef = "clusterSqlSessionFactory")
+@MapperScan(basePackages = {"com.dreamyao.spring.cloud.*.dao.cluster"}, sqlSessionFactoryRef = "clusterSqlSessionFactory")
 public class ClusterDataSourceConfig {
 
-    static final String MAPPER_LOCATION = "classpath:mappers/cluster/*.xml";
+    static final String MAPPER_LOCATION = "classpath:mappers/cluster/*Mapper.xml";
 
     @Value("${cluster.datasource.url}")
     private String url;

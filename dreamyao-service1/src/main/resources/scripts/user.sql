@@ -3,21 +3,21 @@
 -- ----------------------------
 DROP TABLE IF EXISTS `DREAM_USER_T`;
 CREATE TABLE `DREAM_USER_T` (
-  `id` varchar(64) NOT NULL COMMENT 'UserID',
+  `id` varchar(32) NOT NULL COMMENT 'UserID',
   `cn_name` varchar(100) DEFAULT NULL COMMENT '中文名',
   `en_name` varchar(100) DEFAULT NULL COMMENT '英文名',
-  `age` tinyint(3) DEFAULT NULL COMMENT '年龄',
-  `sex` char(1) DEFAULT NULL COMMENT '性别:0,男;1,女;',
+  `age` tinyint(3) DEFAULT 0 COMMENT '年龄',
+  `sex` char(1) DEFAULT 0 COMMENT '性别:0,男;1,女;',
   `email` varchar(100) DEFAULT NULL COMMENT '邮箱地址',
   `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',
-  `country` varchar(30) DEFAULT NULL COMMENT '国家',
+  `country` varchar(30) DEFAULT 'China' COMMENT '国家',
   `province` varchar(30) DEFAULT NULL COMMENT '省份',
   `city` varchar(30) DEFAULT NULL COMMENT '城市',
   `address` varchar(300) DEFAULT NULL COMMENT '地址',
   `enable_flag` char(1) DEFAULT '0' COMMENT '有效标记:0,有效;1,无效;',
-  `created_by` varchar(255) NOT NULL COMMENT '创建人',
+  `created_by` varchar(32) NOT NULL COMMENT '创建人',
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `last_updated_by` varchar(255) NOT NULL COMMENT '更新人',
+  `last_updated_by` varchar(32) NOT NULL COMMENT '更新人',
   `last_updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';

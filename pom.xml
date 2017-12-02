@@ -150,7 +150,7 @@
                     <configuration>
                         <includes>
                             <include>**/*.class</include>
-                            <include>**/mapper/*Mapper.xml</include>
+                            <include>**/mappers/*/*.xml</include>
                         </includes>
                     </configuration>
                 </plugin>

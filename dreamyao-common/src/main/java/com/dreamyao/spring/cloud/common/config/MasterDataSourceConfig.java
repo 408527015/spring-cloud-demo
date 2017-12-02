@@ -22,11 +22,12 @@ import javax.sql.DataSource;
  */
 @Configuration
 @DruidMasterExistAnnotation
+//@EnableTransactionManagement
 // 扫描 Mapper 接口并容器管理
 @MapperScan(basePackages = {"com.dreamyao.spring.cloud.*.dao.master"}, sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig {
 
-    static final String MAPPER_LOCATION = "classpath:mapper/master/*.xml";
+    private static final String MAPPER_LOCATION = "classpath:mappers/master/*Mapper.xml";
 
     @Value("${master.datasource.url}")
     private String url;

@@ -14,5 +14,5 @@ public interface IUserService {
 
     String addUser() throws ServiceException;
 
-    public PageInfo<UserVO> findUserList() throws ServiceException;
+    PageInfo<UserVO> findUserList() throws ServiceException;
 }

@@ -15,7 +15,7 @@ public class UserVO extends BaseVO {
 
     public String enName;
 
-    public String age;
+    public int age;
 
     public String sex;
 
@@ -30,6 +30,8 @@ public class UserVO extends BaseVO {
     public String city;
 
     public String address;
+
+    public String enableFlag;
 
     public String getId() {
         return id;
@@ -55,11 +57,11 @@ public class UserVO extends BaseVO {
         this.enName = enName;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -117,5 +119,13 @@ public class UserVO extends BaseVO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getEnableFlag() {
+        return enableFlag;
+    }
+
+    public void setEnableFlag(String enableFlag) {
+        this.enableFlag = enableFlag;
     }
 }

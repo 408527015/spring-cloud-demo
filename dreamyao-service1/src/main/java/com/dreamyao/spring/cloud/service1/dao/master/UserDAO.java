@@ -9,8 +9,9 @@ import com.github.pagehelper.Page;
  * @date 2017/11/27
  */
 //@Mapper
+//@Repository
 public interface UserDAO {
-    UserVO findUserByID();
+    UserVO findUserByID(String id);
 
     Page<UserVO> findUserList();
 }

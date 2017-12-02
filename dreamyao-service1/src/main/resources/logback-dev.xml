@@ -33,6 +33,9 @@
 
     <logger name="com.dreamyao" level="DEBUG"/>
     <logger name="com.netflix" level="INFO"/>
+    <logger name="org.apache.http" level="INFO"/>
+    <logger name="org.springframework.core.env.PropertySourcesPropertyResolver" level="INFO"/>
+    <logger name="org.springframework.jdbc" level="INFO"/>
 
     <!-- 日志输出级别 -->
     <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->

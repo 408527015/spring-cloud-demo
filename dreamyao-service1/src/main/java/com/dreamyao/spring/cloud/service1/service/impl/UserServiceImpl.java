@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
  * @date 2017/11/25
  */
 @Service
-public class UserService implements IUserService {
+public class UserServiceImpl implements IUserService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserDAO userDAO;
