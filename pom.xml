@@ -25,11 +25,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <!-- spring cloud 版本 -->
-        <spring.cloud.version>Dalston.SR4</spring.cloud.version>
+        <spring.cloud.version>Edgware.RELEASE</spring.cloud.version>
         <!-- spring boot 版本 -->
-        <spring.boot.version>1.5.8.RELEASE</spring.boot.version>
+        <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
         <!-- spring framework 版本 -->
-        <spring.framework.version>4.3.12.RELEASE</spring.framework.version>
+        <spring.framework.version>4.3.13.RELEASE</spring.framework.version>
         <!-- maven compiler 插件版本 -->
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <!-- maven jar 插件版本 -->

@@ -8,11 +8,11 @@
 ### 2.Maven 
 3.5.2
 ### 3.Spring Cloud 
-Dalston.SR4
+Edgware.RELEASE
 ### 4.Spring Boot
-1.5.8.RELEASE
+1.5.9.RELEASE
 ### 5.pringframework
-4.3.12.RELEASE
+4.3.13.RELEASE
 
 ## maven:settings.xml
 ``` xml
