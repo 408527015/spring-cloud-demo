@@ -4,7 +4,7 @@
 
 ## **配置**
 ### 1.JDK 
-1.8
+1.8.0_131
 ### 2.Maven 
 3.5.2
 ### 3.Spring Cloud 
@@ -14,7 +14,7 @@ Dalston.SR4
 ### 5.pringframework
 4.3.12.RELEASE
 
-### 6.maven:settings.xml
+## maven:settings.xml
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
