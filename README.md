@@ -3,18 +3,18 @@
 基于spring cloud生态圈搭建一个demo，包含网关、注册中心、配置中心、spring boot服务、服务监控等
 
 ## **配置**
-### JDK 
+### 1.JDK 
 1.8
-### Maven 
-3.5.0
-### Spring Cloud 
+### 2.Maven 
+3.5.2
+### 3.Spring Cloud 
 Dalston.SR4
-### Spring Boot
+### 4.Spring Boot
 1.5.8.RELEASE
-### springframework
+### 5.pringframework
 4.3.12.RELEASE
 
-###maven settings.xml
+### 6.maven:settings.xml
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
