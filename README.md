@@ -1,9 +1,20 @@
 # spring-cloud-demo
-**a spring cloud demo**
 
-基于spring cloud生态圈搭建一个demo，包含网关、注册中心、配置中心、spring boot服务等
+基于spring cloud生态圈搭建一个demo，包含网关、注册中心、配置中心、spring boot服务、服务监控等
 
-maven settings.xml
+## **配置**
+### JDK 
+1.8
+### Maven 
+3.5.0
+### Spring Cloud 
+Dalston.SR4
+### Spring Boot
+1.5.8.RELEASE
+### springframework
+4.3.12.RELEASE
+
+###maven settings.xml
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
