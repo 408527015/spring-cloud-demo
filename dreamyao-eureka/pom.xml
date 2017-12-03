@@ -13,7 +13,7 @@
     <parent>
         <groupId>com.dreamyao.spring.cloud</groupId>
         <artifactId>spring-cloud-demo</artifactId>
-        <version>1.0.0.SNAPSHOTS</version>
+        <version>1.0.0.SNAPSHOT</version>
     </parent>
 
     <dependencies>
@@ -70,13 +70,13 @@
                         </goals>
                         <configuration>
                             <packaging>jar</packaging>
-                            <repositoryId>${project.distributionManagement.repository.id}</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
+                            <repositoryId>${project.distributionManagement.snapshotRepository.id}</repositoryId>
+                            <url>${project.distributionManagement.snapshotRepository.url}</url>
                             <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>${project.artifactId}</artifactId>
                             <version>${project.version}</version>
-                            <classifier>dreamyao</classifier>
+                            <!--<classifier>dreamyao</classifier>-->
                         </configuration>
                     </execution>
                 </executions>
