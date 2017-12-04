@@ -5,7 +5,7 @@
 
     <groupId>com.dreamyao.spring.cloud</groupId>
     <artifactId>spring-cloud-demo</artifactId>
-    <version>1.0.0.SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-demo</name>
@@ -161,19 +161,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven.deploy.plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>default-deploy</id>
-                            <phase>deploy</phase>
-                            <goals>
-                                <goal>deploy</goal>
-                            </goals>
-                            <!-- skip默认deploy插件的执行 -->
-                            <configuration>
-                                <skip>true</skip>
-                            </configuration>
-                        </execution>
-                    </executions>
                 </plugin>
 
                 <plugin>
@@ -237,6 +224,12 @@
                 </plugin>-->
             </plugins>
         </pluginManagement>
+        <!--<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+        </plugins>-->
     </build>
 
     <!--发布 -->
@@ -244,12 +237,12 @@
         <repository>
             <id>host-releases</id>
             <name>Local Nexus Releases Reporstory</name>
-            <url>http://maven.dreamyao.com/repository/host-release/</url>
+            <url>http://maven.dreamyao.com/repository/host-releases/</url>
         </repository>
         <snapshotRepository>
             <id>host-snapshots</id>
             <name>Local Nexus Snapshots Reporstory</name>
-            <url>http://maven.dreamyao.com/repository/host-snapshot/</url>
+            <url>http://maven.dreamyao.com/repository/host-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
