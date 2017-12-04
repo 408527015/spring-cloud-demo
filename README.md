@@ -20,32 +20,54 @@ Edgware.RELEASE
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>D:\MavenHome</localRepository>
 
-  <localRepository>D:\MavenHome</localRepository>
+    <servers>
+        <server>
+            <id>host-releases</id>
+            <username>test</username>
+            <password>****</password>
+        </server>
+        <server>
+            <id>host-snapshots</id>
+            <username>test</username>
+            <password>****</password>
+        </server>
+    </servers>
 
-  <servers>
-    <server>  
-      <id>host-releases</id>  
-      <username>test</username>  
-      <password>****</password>  
-    </server>  
-    <server>  
-      <id>host-snapshots</id>  
-      <username>test</username>  
-      <password>****</password>  
-    </server>
-  </servers>
+    <mirrors>
+        <mirror>
+            <id>nexus-dreamyao</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus dreamyao</name>
+            <url>http://maven.dreamyao.com/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
 
-  <mirrors>
-	<mirror>
-        <id>nexus-local</id>
-        <mirrorOf>*</mirrorOf>
-        <name>Nexus local</name>
-        <url>http://maven.dreamyao.com/repository/maven-public/</url>
-    </mirror>
-  </mirrors>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <repositories>
+                <repository>
+                    <id>MavenPublic</id>
+                    <url>http://maven.dreamyao.com/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>dev</activeProfile>
+    </activeProfiles>
 
 </settings>
+
 
 ```
 
