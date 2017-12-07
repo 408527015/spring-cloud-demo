@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration scan="true" sacnPeriod="60 seconds" debug="false">
     <!-- 日志目录 -->
-    <!--<property name="LOG_HOME" value="D:/temp/services/service1/logs" />-->
+    <!--<property name="LOG_HOME" value="/home/dreamyao/services/dreamyao-service1-1.0.0-SNAPSHOT/logs" />
+    <property name="LOG_NAME" value="service1" />
+    <property name="LOG_LEVEL" value="INFO" />-->
     <springProperty scope="context" name="LOG_HOME" source="dreamyao.log.path"/>
-    <!--<property name="LOG_NAME" value="service1" />-->
     <springProperty scope="context" name="LOG_NAME" source="dreamyao.log.name"/>
     <springProperty scope="context" name="LOG_LEVEL" source="dreamyao.log.level"/>
 
