@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
- * @author Stone
+ * @author BruceLong
  * @version 1.0.0
  * @date 2017/10/27
  */

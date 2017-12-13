@@ -4,6 +4,7 @@ import com.dreamyao.spring.cloud.common.exception.ServiceException;
 import com.dreamyao.spring.cloud.common.pojo.service1.ResourceVO;
 import com.dreamyao.spring.cloud.service1.service.IResourceService;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author Stone
+ * @author BruceLong
  * @version 1.0.0
  * @date 2017/12/2
  */
 @RestController
 @RequestMapping(value = "/resource")
+@Api
 public class ResourceController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ResourceController.class);

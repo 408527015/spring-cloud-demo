@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * @author Stone
+ * @author BruceLong
  * @version 1.0.0
  * @date 2017/11/29
  */

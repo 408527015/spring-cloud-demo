@@ -4,7 +4,7 @@ import com.dreamyao.spring.cloud.common.pojo.service1.ResourceVO;
 import com.github.pagehelper.Page;
 
 /**
- * @author Stone
+ * @author BruceLong
  * @version 1.0.0
  * @date 2017/12/2
  */
