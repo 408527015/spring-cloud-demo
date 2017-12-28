@@ -7,15 +7,8 @@
     <springProperty scope="context" name="LOG_NAME" source="dreamyao.log.name"/>
     <springProperty scope="context" name="LOG_LEVEL" source="dreamyao.log.level"/>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger Line:%-3L - %msg%n</pattern>
-            <charset>utf-8</charset>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>debug</level>
-        </filter>
-    </appender>
+    <!-- 文件日志格式 -->
+    <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n" />
 
     <!--日志配置-->
     <appender name="FILEDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -26,7 +19,7 @@
             <totalSizeCap>5GB</totalSizeCap>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger Line:%-3L - %msg%n</pattern>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
             <charset>utf-8</charset>
         </encoder>
     </appender>
@@ -41,7 +34,5 @@
     <!-- 生产环境下，将此级别配置为适合的级别，以免日志文件太多或影响程序性能 -->
     <root level="${LOG_LEVEL}">
         <appender-ref ref="FILEDEBUG" />
-        <!-- 生产环境将请stdout去掉 -->
-        <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

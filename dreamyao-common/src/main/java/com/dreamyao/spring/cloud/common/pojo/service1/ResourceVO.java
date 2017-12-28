@@ -17,9 +17,9 @@ public class ResourceVO extends BaseVO {
 
     public String parentID;
 
-    public int level;
+    public Integer level;
 
-    public int orderNum;
+    public Integer orderNum;
 
     public String enableFlag;
 
@@ -57,19 +57,19 @@ public class ResourceVO extends BaseVO {
         this.parentID = parentID;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public int getOrderNum() {
+    public Integer getOrderNum() {
         return orderNum;
     }
 
-    public void setOrderNum(int orderNum) {
+    public void setOrderNum(Integer orderNum) {
         this.orderNum = orderNum;
     }
 

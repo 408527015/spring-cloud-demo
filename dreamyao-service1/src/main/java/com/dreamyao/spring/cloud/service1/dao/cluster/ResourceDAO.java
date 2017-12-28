@@ -8,6 +8,7 @@ import com.github.pagehelper.Page;
  * @version 1.0.0
  * @date 2017/12/2
  */
+//@Repository
 public interface ResourceDAO {
 
     Page<ResourceVO> findResourceList();

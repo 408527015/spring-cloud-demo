@@ -43,6 +43,7 @@ public class UserController {
 
     @RequestMapping(value = "/findUserList", method = RequestMethod.GET)
     public PageInfo<UserVO> findUserList() throws ServiceException {
+        LOGGER.info("sasasasasasasasasasas");
         return userService.findUserList();
     }
 }

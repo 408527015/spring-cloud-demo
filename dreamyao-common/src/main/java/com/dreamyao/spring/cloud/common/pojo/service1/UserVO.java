@@ -15,7 +15,7 @@ public class UserVO extends BaseVO {
 
     public String enName;
 
-    public int age;
+    public Integer age;
 
     public String sex;
 
@@ -57,11 +57,11 @@ public class UserVO extends BaseVO {
         this.enName = enName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
