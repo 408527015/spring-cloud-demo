@@ -4,15 +4,15 @@
 
 ## **配置**
 ### 1.JDK 
-1.8.0_152
+1.8.0_151
 ### 2.Maven 
 3.5.2
 ### 3.Spring Cloud 
-Edgware.RELEASE
+Edgware.SR2
 ### 4.Spring Boot
-1.5.9.RELEASE
+1.5.10.RELEASE
 ### 5.pringframework
-4.3.13.RELEASE
+4.3.14.RELEASE
 
 ## maven:settings.xml
 ``` xml
