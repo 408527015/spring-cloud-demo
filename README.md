@@ -11,7 +11,7 @@
 Edgware.SR2
 ### 4.Spring Boot
 1.5.10.RELEASE
-### 5.pringframework
+### 5.Springframework
 4.3.14.RELEASE
 
 ## maven:settings.xml
