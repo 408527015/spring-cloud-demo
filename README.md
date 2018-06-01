@@ -6,7 +6,7 @@
 ### 1.JDK 
 1.8.0_161
 ### 2.Maven 
-3.5.32
+3.5.3
 ### 3.Spring Cloud 
 Edgware.SR2
 ### 4.Spring Boot
